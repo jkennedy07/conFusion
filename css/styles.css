@@ -41,3 +41,13 @@ body {
 .navbar-dark {
    background-color: #512da8;
 }
+
+.card-header {
+   background:goldenrod;
+   color:#fff;
+   margin: 0px 0px 10px 0px;
+}
+
+#radio-buttons {
+   margin: 20px 0px;
+}
