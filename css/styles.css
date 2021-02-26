@@ -42,6 +42,10 @@ body {
    background-color: #512da8;
 }
 
+.card {
+   padding:0px;
+}
+
 .card-header {
    background:goldenrod;
    color:#fff;
