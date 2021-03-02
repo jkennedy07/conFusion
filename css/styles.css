@@ -55,3 +55,19 @@ body {
 #radio-buttons {
    margin: 20px 0px;
 }
+
+.tab-content {
+   border-left: 1px solid #ddd; 
+   border-right: 1px solid #ddd; 
+   border-bottom: 1px solid #ddd;
+   padding: 20px;
+}
+
+blockquote {
+   padding: 15px;
+}
+
+.no-margin {
+   margin: 0px;
+   padding: 0px;
+}
