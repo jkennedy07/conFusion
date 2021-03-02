@@ -52,6 +52,10 @@ body {
    margin: 0px 0px 10px 0px;
 }
 
+#peterhead, #dannyhead, #agumbehead, #albertohead {
+   background:#512da8;
+}
+
 #radio-buttons {
    margin: 20px 0px;
 }
