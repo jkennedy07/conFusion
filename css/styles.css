@@ -61,7 +61,7 @@ body {
    color:#fff;
 }
 
-#radio-buttons {
+#radioButtonsRegular {
    margin: 20px 0px;
 }
 
@@ -89,4 +89,8 @@ blockquote {
    top: 0; 
    left: 0; 
    min-height: 300px; 
+}
+
+#reservationButtonText {
+   font-size: 1.6rem;
 }
