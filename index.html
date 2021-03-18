@@ -29,9 +29,9 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul> 
                 <span class="navbar-text"> 
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <button type="button" class="btn" id="loginButton">
                         <span class="fa fa-sign-in"></span>Login
-                    </a> 
+                    </button> 
                 </span>
             </div>
         </div> 
@@ -85,10 +85,9 @@
                         <img src="img/logo.png" class="img-fluid"> 
                     </div>
                     <div class="col-12 col-sm-6 align-self-center">
-                        <button type="button" class="btn-sm btn-warning btn-block text-center" data-target="#reservationModal" 
-                        data-toggle="modal">
+                        <button type="button" class="btn-sm btn-warning btn-block text-center" id="reservationButton">
                             <span id="reservationButtonText">Reserve Table</span>
-                    </button>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -172,7 +171,7 @@
     <div class="container"> 
         <div class="row row-content"> 
             <div class="col-12"> 
-                <!-- carousel -->
+        <!-- carousel -->
                 <div id="mycarousel" class="carousel slide" data-ride="carousel"> 
                     <div class="carousel-inner" role="listbox"> 
                         <div class="carousel-item active"> 
@@ -210,8 +209,8 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next"> 
                         <span class="carousel-control-next-icon"></span> 
                     </a>
-                    <div class="btn-group" id="carouselBox"> 
-                        <button class="btn btn-danger btn-sm" id="carouselButton"> 
+                    <div class="btn-group" id="carouselButton">   <!-- button -->
+                        <button class="btn btn-danger btn-sm" id="carouselStopStart"> 
                             <span id="carousel-button-icon" class="fa fa-pause"></span> 
                         </button>
                     </div>
@@ -326,18 +325,26 @@
         $(document).ready(function(){ 
             $("#mycarousel").carousel( { interval: 2000 } ); 
 
-            $("#carouselButton").click(function(){ 
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) { 
+            $("#carouselStopStart").click(function(){ 
+                if ($("#carouselStopStart").children("span").hasClass('fa-pause')) { 
                     $("#mycarousel").carousel('pause'); 
-                    $("#carouselButton").children("span").removeClass('fa-pause'); 
-                    $("#carouselButton").children("span").addClass('fa-play'); 
+                    $("#carouselStopStart").children("span").removeClass('fa-pause'); 
+                    $("#carouselStopStart").children("span").addClass('fa-play'); 
                 }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){ 
+                else if ($("#carouselStopStart").children("span").hasClass('fa-play')){ 
                     $("#mycarousel").carousel('cycle'); 
-                    $("#carouselButton").children("span").removeClass('fa-play'); 
-                    $("#carouselButton").children("span").addClass('fa-pause'); 
+                    $("#carouselStopStart").children("span").removeClass('fa-play'); 
+                    $("#carouselStopStart").children("span").addClass('fa-pause'); 
                 } 
             });
+        });
+    </script>
+    <script>  // Assignment 04
+        $("#reservationButton").click(function(){             
+            $('#reservationModal').modal('show');
+        });
+        $("#loginButton").click(function(){             
+            $('#loginModal').modal('show');
         });
     </script>
 
